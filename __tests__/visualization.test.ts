@@ -72,6 +72,11 @@ describe('visualization', () => {
     const html = renderVisualizationHtml(graph);
 
     expect(html).toContain('Graph &lt;danger&gt;');
+    expect(html).toContain('<canvas id="graph"');
+    expect(html).toContain('id="gravitySlider" type="range" min="0" max="140" value="18"');
+    expect(html).toContain('id="linkSlider" type="range" min="70" max="900" value="165"');
+    expect(html).toContain('id="spread"');
+    expect(html).toContain('function stepPhysics');
     expect(html).toContain('\\u003c/script\\u003e');
     expect(html).not.toContain('</script><img');
   });
